@@ -129,7 +129,7 @@ nav{
 
 nav .menu ul li a{
     position: relative;
-    transition: all 0.3s linear;
+   
 }
 
 nav .menu ul li a::after{
@@ -137,7 +137,7 @@ nav .menu ul li a::after{
     width: 0%;
     height: 2px; 
     position: absolute;
-    top: 61px;
+    top: 25px;
     display: block;
     margin: auto;
     background-color: #24cdd5;
