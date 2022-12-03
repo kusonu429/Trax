@@ -497,6 +497,9 @@ nav .menu ul li a:hover::after {
 .bottom-text-section .mock-box .m-box{
     padding: 25px 0;
 }
+.bottom-text-section .mock-box img{
+    width: 100%;
+}
 
 .text-left{
     text-align: left;
@@ -638,7 +641,7 @@ footer{
 
 
     .menu ul li{
-        line-height: 30px;
+        line-height: 50px;
     }
 
     .menu ul li a{
