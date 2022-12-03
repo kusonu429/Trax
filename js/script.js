@@ -1,6 +1,26 @@
 
 
 
+let humburger = document.querySelector(".humburger"); 
+let menu = document.querySelector(".menu"); 
+
+
+humburger.addEventListener('click' , function(){
+
+  
+  menu.classList.toggle('active')
+
+
+
+})
+
+
+
+
+
+
+
+
 //...................Sticky Navbar starts ...............//
 $(function(){
 

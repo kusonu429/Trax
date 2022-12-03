@@ -3,7 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--primary-font);
+    /* border: 1px solid red; */
     
+}
+
+html{
+    font-size: 10px; 
+} 
+
+body{
+    scroll-behavior: smooth;
 }
 
 
@@ -19,10 +28,7 @@
     
 }
 
- body,html{
-    font-size: 10px; 
-    scroll-behavior: smooth
-}
+
 
 /* Golobal Clases  */
 
@@ -118,7 +124,7 @@ nav{
 
 
 .nav-white {  
-    position:sticky;
+    position:fixed;
     top: 0; 
     max-width: none;
     width: 100%;   
@@ -163,6 +169,7 @@ nav .menu ul li a:hover::after {
 .logo{
     /* background-color: #000; */
     width:20%; 
+    background-color: rebeccapurple;
 }
 
 .logo a img{
@@ -198,17 +205,18 @@ nav .menu ul li a:hover::after {
 
 
 
-.menu{
-    width:50%; 
-} 
+.menu {
+    width: 75%;
+    max-width: 800px;
+    /* background-color: #24cdd5; */
+}
 
 .social-icons li{
     margin-left: 20px; 
 }
 
-.humburger{
-    background-color: green;
-    font-size:30px;
+.humburger{    
+    font-size:30px; 
     width: 40px;
     height: 40px;
     display: grid;
@@ -257,17 +265,18 @@ nav .menu ul li a:hover::after {
 
 /* === theree box sec starts =====  */
 .theree-sec{
-    background-color: #4a9bdf;
+    /* background-color: #4a9bdf; */ 
     position: relative;
+    top: -100px;
 } 
 
 .theree-sec .box-t {
-    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     display: flex;  
-    position: absolute;
-    top: -100px;
+    /* position: absolute;
+    top: -100px; */
+
   
 }
 
@@ -286,9 +295,7 @@ nav .menu ul li a:hover::after {
     background-image: linear-gradient(90deg,
     rgba(81,146,225,1) 0,
     rgba(36,205,213,1) 100%) !important; 
-    transform: scale(1.1);
-    
-}
+   }
 
 .theree-sec .box-t .boxex:hover{ 
     background-image: linear-gradient(90deg,
@@ -325,10 +332,17 @@ nav .menu ul li a:hover::after {
 /* === theree box sec ends =====  */
 
 .coffe-section{
- padding-top: 300px;
- padding-bottom: 100px;
+ padding: 100px 0;
 }
 
+.coffe-section .coffe-box { 
+    width: 50%;
+}
+
+.coffe-section .coffe_box_2{
+    display: flex;
+    justify-content: flex-end;
+}
 
 .coffe-section .coffe-box img{
     width: 100%;
@@ -567,4 +581,148 @@ footer{
     text-transform: capitalize;
     font-weight: 400;
     font-family: var(--primary-font);
+}
+
+
+
+@media only screen and (max-width:1200px){
+
+    .container{
+        width:90%;
+        
+    }
+
+}
+
+
+@media only screen and (max-width:991px){
+
+
+    h2{
+        font-size: 3.4rem;
+    }
+
+    .navbar{
+        background-color: var(--light-color);
+    }
+
+    .humburger{
+        display: block;
+    }
+
+
+    .humburger .icon-bars {
+        border: 2px solid var(--dark-color);
+        padding: 5px 7px 5px 7px;
+    }
+
+    .menu {
+        max-width: 1400px;
+        width: 100%;
+        position: absolute;
+        top: -400px;
+        left: 0;
+        background-color: var(--light-color);       
+        padding-left: 5%;
+        transition: all 0.5s ease;
+    }
+
+    .active{
+        top: 85px;
+    }
+
+    .menu ul{
+        flex-direction: column;       
+        align-items: flex-start;
+    }
+
+
+    .menu ul li{
+        line-height: 30px;
+    }
+
+    .menu ul li a{
+        color: var(--dark-grey);
+    }
+
+    .menu ul li .social-icons{
+        flex-direction: row;
+    }
+
+
+}
+
+
+@media only screen and (max-width:767px){
+
+
+    .theree-sec .box-t .boxex h4 {     
+        font-size: 1.5rem;
+    }
+  
+    .coffe-section .coffe-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .coffe-section .coffe_box_2{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-section .f-box {
+        width: 47.5%;      
+        margin: 25px 0;
+    }
+
+    .top-text-section .text-sec-t {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+
+    .bottom-text-section .mock-box {
+        width: 100%;  
+        text-align: center;    
+    }
+
+    
+    .bottom-text-section .mock-box img{
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .bottom-text-section .mock-box .m-box {
+        padding: 25px 0;
+        width: 47.5%;
+        text-align: center;
+    }
+
+    
+
+    
+}
+
+@media only screen and (max-width:575px){
+   
+    .theree-sec .box-t {       
+        display:unset;
+    }
+
+    .theree-sec .box-t .boxex {    
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .bottom-text-section .mock-box .m-box {    
+        width: 100%;   
+    }
+
+    .footer-box {
+        width: 100%;
+        margin: 50px 0;
+        height: unset;
+    }
+
+
 }
